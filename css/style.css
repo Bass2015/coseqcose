@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('../fonts/lemonmilk.otf'); 
+}
+@font-face {
+  font-family: 'BetterTogether';
+  src: url('../fonts/bettertogether.otf'); 
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
@@ -32,7 +42,7 @@ body {
 
 h1,
 h2 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'LemonMilk';
 }
 
 .heading_container {
@@ -154,7 +164,7 @@ a:focus {
 .navbar-brand span {
   font-weight: bold;
   font-size: 32px;
-  color: #ffffff;
+  color: #262927;
 }
 
 .custom_nav-container {
@@ -167,16 +177,18 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 5px 20px;
-  color: #ffffff;
+  color: #262927;
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  transition: all .2s ease-in-out; 
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #ffbe33;
+  color: #4ba91c;
+  transform: scale(1.1);
 }
 
 .custom_nav-container .nav_search-btn {
@@ -337,7 +349,7 @@ a:focus {
 }
 
 .slider_section .detail-box {
-  color: #ffffff;
+  color: #262927;
   margin-bottom: 145px;
 }
 
@@ -348,23 +360,25 @@ a:focus {
 }
 
 .slider_section .detail-box p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .slider_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #ffbe33;
+  background-color: #5eb732;
   color: #ffffff;
   border-radius: 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
   margin-top: 10px;
+  transition: all .2s ease-in-out; 
 }
 
 .slider_section .detail-box a:hover {
-  background-color: #e69c00;
+  background-color: #4f8137;
+  transform: scale(1.1);
 }
 
 .slider_section .img-box img {
@@ -393,7 +407,7 @@ a:focus {
 .slider_section .carousel-indicators li.active {
   width: 20px;
   height: 20px;
-  background-color: #ffbe33;
+  background-color: #5eb732;
 }
 
 .offer_section {
