@@ -12,7 +12,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
-  background-color: #ffffff;
+  background-color: #fafafa;
   overflow-x: hidden;
 }
 
@@ -166,7 +166,12 @@ a:focus {
   font-size: 32px;
   color: #262927;
 }
-
+h3 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: 40px;
+  color: #262927;
+}
 .custom_nav-container {
   padding: 0;
 }
@@ -351,6 +356,8 @@ a:focus {
 .slider_section .detail-box {
   color: #262927;
   margin-bottom: 145px;
+  
+  
 }
 
 .slider_section .detail-box h1 {
@@ -382,7 +389,7 @@ a:focus {
 }
 
 .slider_section .img-box img {
-  width: 100%;
+  width: 150%;
 }
 
 .slider_section .carousel-indicators {
