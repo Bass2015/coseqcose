@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: "LemonMilk";
-  src: url("/fonts/lemonmilk.otf") format("opentype");
+  src: url("../fonts/lemonmilk.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -43,7 +43,7 @@
 
 @font-face {
   font-family: "BetterTogether";
-  src: url("/fonts/bettertogether.otf") format("opentype");
+  src: url("../fonts/bettertogether.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
