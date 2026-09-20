@@ -1,1137 +1,554 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-  <!-- Basic -->
+  <!-- ============================================================
+    SYNC CHECKLIST — si editas datos de negocio, cámbialos también
+    en /ca/index.html y /en/index.html:
+      Teléfono/WhatsApp: +34 627 39 87 39 (tel:+34627398739 / wa.me/34627398739)
+      Email: coseqcose.bcn@gmail.com
+      Dirección: Carrer del Baró de Sant Lluís, 37, 08024 Barcelona
+      Horario: L–V 10:00–14:00 y 15:00–19:00 · Sáb y dom cerrado
+      Recogida: Can Baró gratis · Resto de Barcelona 5 € (recogida + entrega)
+      Rating: 4,9 · 86 reseñas
+    Verificar: grep -rn "627" index.html ca en | sort
+  ============================================================ -->
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta property="og:site_name" content="Arreglos de ropa">
-  <meta name="keywords"
-    content="taller de arreglos de ropa, costura, confección de prendas, arreglo de prendas, Barcelona, upcycling, customizacion" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Arreglos de ropa y bolsos artesanales a domicilio en Can Baró y El Guinardó | Cose Q' Cose</title>
   <meta name="description"
-    content="Tu taller costura familiar en Can Baró, Barcelona. Hacemos todo tipo de arreglos, customizamos prendas, y creamos regalos personalizados">
+    content="Taller de costura familiar con recogida y entrega a domicilio en Can Baró, El Guinardó, El Carmel, Gràcia y toda Barcelona. Bolsos hechos a mano, arreglos de ropa y transformaciones. Llámanos o escríbenos por WhatsApp y lo organizamos." />
+
+  <link rel="canonical" href="https://www.coseqcose.com/" />
+  <link rel="alternate" hreflang="es" href="https://www.coseqcose.com/" />
+  <link rel="alternate" hreflang="ca" href="https://www.coseqcose.com/ca/" />
+  <link rel="alternate" hreflang="en" href="https://www.coseqcose.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.coseqcose.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cose Q' Cose" />
+  <meta property="og:title" content="Cose Q' Cose — costura y complementos artesanales a domicilio en Barcelona" />
   <meta property="og:description"
-    content="Bienvenidos a nuestro taller de arreglos de ropa, donde ofrecemos servicios de costura y customizació de prendas a medida. ¡Visítanos para conocer nuestros servicios!">
-  <!-- FAVICON PERSONALIZADO
-  <link rel="shortcut icon" href="images/favicon.png" type="">
-  -->
-  <!-- FAVICON EMOJI-->
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✂️</text></svg>">
+    content="Bolsos hechos a mano y arreglos de ropa con recogida y entrega a domicilio en Can Baró, El Guinardó, El Carmel, Gràcia y toda Barcelona." />
+  <meta property="og:url" content="https://www.coseqcose.com/" />
+  <meta property="og:image" content="https://www.coseqcose.com/images/og-image.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <title> Cose Q' Cose - arreglos de ropa</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="preload" href="fonts/lemonmilk.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
 
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <!-- nice select  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
-    integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
-    crossorigin="anonymous" />
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.coseqcose.com/#negocio",
+    "name": "Cose Q' Cose",
+    "description": "Taller de costura familiar con servicio de recogida y entrega a domicilio en Barcelona: bolsos y complementos artesanales, arreglos y transformaciones de ropa.",
+    "url": "https://www.coseqcose.com/",
+    "telephone": "+34627398739",
+    "email": "coseqcose.bcn@gmail.com",
+    "image": "https://www.coseqcose.com/images/og-image.jpg",
+    "priceRange": "€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer del Baró de Sant Lluís, 37",
+      "addressLocality": "Barcelona",
+      "addressRegion": "Barcelona",
+      "postalCode": "08024",
+      "addressCountry": "ES"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 41.4164482, "longitude": 2.1630407 },
+    "areaServed": [
+      { "@type": "Place", "name": "Can Baró, Barcelona" },
+      { "@type": "Place", "name": "El Guinardó, Barcelona" },
+      { "@type": "Place", "name": "El Carmel, Barcelona" },
+      { "@type": "Place", "name": "Gràcia, Barcelona" },
+      { "@type": "City", "name": "Barcelona" }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "10:00",
+        "closes": "14:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "15:00",
+        "closes": "19:00"
+      }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "86" },
+    "sameAs": [
+      "https://www.instagram.com/coseqcose.bcn/",
+      "https://maps.app.goo.gl/PLKGwGQZFfFuwniM7"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-  <div class="hero_area">
-    <div class="bg-box">
-      <img src="images/maqu_coser2.png" alt="">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">Cose <span>Q'</span> Cose</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"
+        aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
+      </button>
+      <nav class="site-nav" id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="#complementos">Complementos</a></li>
+          <li><a href="#arreglos">Arreglos</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <nav class="lang-switch" aria-label="Idioma">
+        <a href="./" aria-current="page" lang="es">ES</a>
+        <a href="ca/" lang="ca">CA</a>
+        <a href="en/" lang="en">EN</a>
+      </nav>
     </div>
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Cose Q' Cose
-            </span>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Voy donde me necesitas</span>
+          <h1>Costura y complementos artesanales a domicilio en Barcelona</h1>
+          <p class="lead">Somos el taller de costura familiar de Can Baró. Cosemos bolsos y accesorios únicos,
+            arreglamos y transformamos tu ropa — y la recogemos y entregamos en tu casa, en Can Baró,
+            El Guinardó, El Carmel, Gràcia y toda Barcelona.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-whatsapp"
+              href="https://wa.me/34627398739?text=Hola!%20Quiero%20pedir%20una%20recogida%20a%20domicilio."
+              target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3Z" />
+              </svg>
+              Escríbenos por WhatsApp
+            </a>
+            <a class="btn btn-outline" href="#como-funciona">Cómo funciona ↓</a>
+          </div>
+          <a class="rating-badge" href="https://maps.app.goo.gl/PLKGwGQZFfFuwniM7" target="_blank" rel="noopener">
+            <span class="stars" aria-hidden="true">★★★★★</span> 4,9 · 86 reseñas en Google
           </a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  mx-auto ">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#servicios">Servicios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#sobre_nosotros">Sobre nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contacto">Contacto</a>
-              </li>
-            </ul>
-            <!--div class="user_option">
-              <a href="" class="user_link">
-                <i class="fa fa-user" aria-hidden="true"></i>
-              </a>
-              <a class="cart_link" href="#">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                  <g>
-                    <g>
-                      <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                   c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                    </g>
-                  </g>
-                  <g>
-                    <g>
-                      <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                   C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                   c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                   C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                    </g>
-                  </g>
-                  <g>
-                    <g>
-                      <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                   c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                    </g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                </svg>
-              </a>
-              <form class="form-inline">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
-              <a href="" class="order_online">
-                Order Online
-              </a>
-            </div-->
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section layout_padding-bottom">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7 col-lg-5 ">
-                  <div class="detail-box">
-                    <h1>
-                      Cose Q' Cose
-                    </h1>
-                    <h3>
-                      Arreglos
-                    </h3>
-                    <p>
-                      Somos Cose Q' Cose, un pequeño <strong>taller de costura</strong> familiar
-                      en el corazón del barrio de Can Baró, en Barcelona. Hacemos todo tipo de
-                      <strong>arreglos de ropa</strong> en Barcelona:
-                      bajos de pantalón, cambiar cremalleras, entallar camisas...
-                    </p>
-                    <div class="btn-box">
-                      <a href="#servicios" class="btn1">
-                        Más información
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item ">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7 col-lg-5 ">
-                  <div class="detail-box">
-                    <h1>
-                      Cose Q' Cose
-                    </h1>
-                    <h3>
-                      Upcycling
-                    </h3>
-                    <p>
-                      Estamos muy concienciados con el reaprovechamiento de ropa y con la <strong>economía
-                        circular</strong>.
-                      ¿Por qué tirar una prenda si se puede arreglar? ¿Y qué tal si le damos una segunda
-                      vida? Por eso, también nos especializamos en <strong>customización</strong> y
-                      <strong>transformación</strong> de prendas.
-                    </p>
-                    <div class="btn-box">
-                      <a href="#servicios" class="btn1">
-                        Más información
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7 col-lg-5 ">
-                  <div class="detail-box">
-                    <h1>
-                      Cose Q' Cose
-                    </h1>
-                    <h3>
-                      Complementos
-                    </h3>
-                    <p>
-                      También confeccionamos <strong>complementos personalizados</strong> con todo tipo
-                      de materiales. Tote bag, necesseres, bolsas de viaje, mochilas...
-                      Sólo tienes que acercarte a nuestra tienda, elegir las telas, colores y
-                      estampados, ¡y en muy poco tiempo te tendremos listo tu bolso!
-                    </p>
-                    <div class="btn-box">
-                      <a href="#servicios" class="btn1">
-                        Más información
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="container">
-          <ol class="carousel-indicators">
-            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-            <li data-target="#customCarousel1" data-slide-to="1"></li>
-            <li data-target="#customCarousel1" data-slide-to="2"></li>
-          </ol>
-        </div>
+        <figure class="hero-figure">
+          <img src="images/bolsos/bolso-saco-mostaza-azul.jpg" width="1200" height="900" fetchpriority="high"
+            alt="Bolso saco artesanal mostaza y azul marino hecho a mano en nuestro taller de costura de Can Baró, Barcelona" />
+        </figure>
       </div>
-
     </section>
-    <!-- end slider section -->
-  </div>
 
-  <!-- offer section
-
-  <section class="offer_section layout_padding-bottom">
-    <div class="offer_container">
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-6  ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/o1.jpg" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Tasty Thursdays
-                </h5>
-                <h6>
-                  <span>20%</span> Off
-                </h6>
-                <a href="">
-                  Order Now <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                    <g>
-                      <g>
-                        <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                     c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                      </g>
-                    </g>
-                    <g>
-                      <g>
-                        <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                     C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                     c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                     C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                      </g>
-                    </g>
-                    <g>
-                      <g>
-                        <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                     c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                      </g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6  ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/o2.jpg" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Pizza Days
-                </h5>
-                <h6>
-                  <span>15%</span> Off
-                </h6>
-                <a href="">
-                  Order Now <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                    <g>
-                      <g>
-                        <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                     c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                      </g>
-                    </g>
-                    <g>
-                      <g>
-                        <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                     C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                     c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                     C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                      </g>
-                    </g>
-                    <g>
-                      <g>
-                        <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                     c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                      </g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                  </svg>
-                </a>
-              </div>
-            </div>
+    <!-- ============ COMPLEMENTOS ============ -->
+    <section class="section section-alt" id="complementos">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Tu ropa, mis manos, grandes ideas</span>
+          <h2>Complementos hechos a mano: bolsos, mochilas y neceseres únicos</h2>
+          <p class="lead">Cada pieza se cose por encargo en nuestro taller de Can Baró: tú eliges telas, colores
+            y detalles (¿un bordado con su nombre?), y nosotros le damos vida. También transformamos prendas con
+            historia en bolsos nuevos — upcycling con cariño.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="images/bolsos/bolso-saco-mostaza-azul.jpg" loading="eager" width="1200" height="900"
+              alt="Bolso saco artesanal mostaza y azul marino con bolsillos estampados, hecho a mano en Barcelona" />
+            <figcaption>Bolso saco mostaza y azul</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/neceser-patchwork-arcoiris.jpg" loading="eager" width="900" height="675"
+              alt="Neceser patchwork arcoíris de lona cosido a mano, complemento artesanal de Cose Q' Cose Barcelona" />
+            <figcaption>Neceser patchwork arcoíris</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/clutch-flor-de-loto-azul.jpg" loading="eager" width="900" height="675"
+              alt="Clutch artesanal azul con flores de loto y pompón, hecho a mano en nuestro taller de costura" />
+            <figcaption>Clutch flor de loto</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/bolso-tote-rayas-azul-beige.jpg" loading="lazy" width="675" height="900"
+              alt="Bolso tote artesanal de rayas azul marino y beige con asas blancas, hecho a mano en Barcelona" />
+            <figcaption>Tote de rayas marineras</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/capazo-rafia-verano.jpg" loading="lazy" width="675" height="900"
+              alt="Capazo de rafia de verano con forro de flores azules, bolso artesanal hecho en Can Baró" />
+            <figcaption>Capazo de rafia</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/bolso-saco-toile-rojo.jpg" loading="lazy" width="675" height="900"
+              alt="Bolso saco artesanal de tela toile roja con cordón, cosido a mano en Barcelona" />
+            <figcaption>Bolso saco toile rojo</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/mochila-ciudades-del-mundo.jpg" loading="lazy" width="675" height="900"
+              alt="Mochila artesanal de tela con nombres de ciudades del mundo y correas marrones, hecha a mano" />
+            <figcaption>Mochila ciudades del mundo</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/mochila-infantil-ratona.jpg" loading="lazy" width="675" height="900"
+              alt="Mochila infantil de cuerdas con ratoncito de tela vaquera, complemento personalizado para niños" />
+            <figcaption>Mochila infantil ratoncito</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/bolsa-viaje-vaquera-roja.jpg" loading="lazy" width="675" height="900"
+              alt="Bolsa de viaje artesanal de patchwork vaquero y rojo, tela reciclada, upcycling en Barcelona" />
+            <figcaption>Bolsa de viaje upcycling</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/bandolera-tweed-negro.jpg" loading="lazy" width="675" height="900"
+              alt="Bandolera artesanal negra con solapa de tweed gris, bolso hecho a mano en Can Baró, Barcelona" />
+            <figcaption>Bandolera de tweed</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/bolso-tote-faro-marinero.jpg" loading="lazy" width="675" height="900"
+              alt="Bolso tote marinero con estampado de faros y asas rojas, cosido a mano en Barcelona" />
+            <figcaption>Tote marinero de faros</figcaption>
+          </figure>
+          <figure>
+            <img src="images/bolsos/neceser-infantil-unicornio.jpg" loading="lazy" width="900" height="720"
+              alt="Monedero infantil artesanal con unicornios y pompón coral, regalo personalizado hecho a mano" />
+            <figcaption>Monedero de unicornios</figcaption>
+          </figure>
+          <div class="gallery-cta">
+            <p>¿Tienes una idea?<br />La cosemos juntos</p>
+            <a class="btn btn-whatsapp"
+              href="https://wa.me/34627398739?text=Hola!%20Quiero%20encargar%20un%20complemento%20personalizado."
+              target="_blank" rel="noopener">Pide tu encargo</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  end offer section -->
-
-  <!-- food section -->
-
-  <section id="servicios" class="food_section layout_padding-bottom layout_padding-top">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Nuestros servicios
-        </h2>
+    <!-- ============ ARREGLOS ============ -->
+    <section class="section" id="arreglos">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Con amor y cuidado</span>
+          <h2>Arreglos, ajustes y transformaciones de ropa</h2>
+          <p class="lead">Arreglamos todo tipo de prendas para que te queden como un guante, con recogida y
+            entrega a domicilio en toda Barcelona.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <img src="images/arreglo-pantalones-vaqueros.jpg" loading="lazy" width="700" height="466"
+              alt="Arreglo de pantalones vaqueros: cambio de cremallera y bajos en Barcelona" />
+            <div class="card-body">
+              <h3>Pantalones</h3>
+              <ul>
+                <li>Cambio de cremallera</li>
+                <li>Estrechar cintura</li>
+                <li>Bajos de pantalón</li>
+                <li>Estrechar pernera</li>
+              </ul>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/arreglo-chaqueta.jpg" loading="lazy" width="700" height="466"
+              alt="Arreglo de chaquetas y abrigos: mangas, forro y cremalleras en Barcelona" />
+            <div class="card-body">
+              <h3>Chaquetas y abrigos</h3>
+              <ul>
+                <li>Acortar mangas y bajos</li>
+                <li>Arreglar forro</li>
+                <li>Cambiar cremallera</li>
+                <li>Entallar</li>
+              </ul>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/arreglo-vestido.jpg" loading="lazy" width="525" height="700"
+              alt="Ajuste de vestidos de fiesta y novia en taller de costura de Can Baró, Barcelona" />
+            <div class="card-body">
+              <h3>Vestidos y fiesta</h3>
+              <ul>
+                <li>Entallar vestidos</li>
+                <li>Novia e invitada</li>
+                <li>Bajos y tirantes</li>
+                <li>Ajustes exprés</li>
+              </ul>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/customizacion-prenda.jpg" loading="lazy" width="700" height="466"
+              alt="Customización y transformación de prendas: bordados, parches y upcycling en Barcelona" />
+            <div class="card-body">
+              <h3>Customización y transformación</h3>
+              <ul>
+                <li>Bordados y parches</li>
+                <li>Upcycling de prendas</li>
+                <li>De prenda a bolso o cojín</li>
+                <li>Regalos personalizados</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <p class="note">¿Una urgencia antes de un evento? Cuéntanoslo por WhatsApp y haremos todo lo posible.</p>
       </div>
+    </section>
 
-      <ul class="filters_menu">
-        <li class="active" data-filter="*">Todo</li>
-        <li data-filter=".arreglos">Arreglos</li>
-        <li data-filter=".upcycling">Upcycling</li>
-        <li data-filter=".complementos">Complementos</li>
-      </ul>
-
-      <div class="filters-content">
-        <div class="row grid">
-          <div class="col-sm-6 col-lg-4 all arreglos">
-            <div class="box">
-              <div>
-                <div class="img-box">
-                  <img src="images/jeans.png" alt="cambiar cremallera pantalon">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Pantalones
-                  </h5>
-                  <p>
-                    Arreglamos todo tipo pantalones: vaqueros, chándal, de vestir... Entre otras cosas, hacemos:
-                  <ul>
-                    <li>Cambio de cremallera</li>
-                    <li>Estrechar cintura</li>
-                    <li>Bajos</li>
-                    <li>Estrechar pernera</li>
-                  </ul>
-                  </p>
-                  </p>
-                  </p>
-                  </p>
-                  </p>
-                  <!--<div class="options">
-                    <h6>
-                      $20
-                    </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
-                    </a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
+    <!-- ============ CÓMO FUNCIONA ============ -->
+    <section class="section section-alt" id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">A domicilio</span>
+          <h2>Recogida y entrega a domicilio: así de fácil</h2>
+          <p class="lead">Trabajamos con cita previa para dedicarle a tu prenda el tiempo que se merece.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>Llámanos o escríbenos</h3>
+            <p>Cuéntanos por teléfono o WhatsApp qué necesitas y buscamos juntos el mejor momento para pasar a
+              recoger tu prenda.</p>
           </div>
-          <div class="col-sm-6 col-lg-4 all arreglos">
-            <div class="box">
-              <div>
-                <div class="img-box">
-                  <img src="images/jacket.png" alt="arreglar cremallera chaqueta">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Chaquetas
-                  </h5>
-                  <p>
-                    Trabajamos con chaquetas de muchas variedades distintas.
-                  <ul>
-                    <li>Acortar mangas</li>
-                    <li>Acortar bajos</li>
-                    <li>Arreglar forro</li>
-                    <li>Cambiar cremallera</li>
-                  </ul>
-                  </p>
-                  <!--<div class="options">
-                    <h6>
-                      $15
-                    </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
-                    </a>
-                  </div> -->
-                </div>
-              </div>
-            </div>
+          <div class="step">
+            <h3>Recogemos en tu puerta</h3>
+            <p>Pasamos por tu casa en Can Baró, El Guinardó, El Carmel, Gràcia o cualquier punto de Barcelona.</p>
           </div>
-          <div class="col-sm-6 col-lg-4 all upcycling">
-            <div class="box">
-              <div>
-                <div class="img-box">
-                  <img src="images/sunny2.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Customización
-                  </h5>
-                  <p>
-                    En nuestro taller de costura, ofrecemos servicios de personalización
-                    de prendas para que puedas expresar tu estilo personal. Desde bordados
-                    y parches hasta estampados y detalles únicos, estamos comprometidos a
-                    ayudarte a transformar tus prendas en piezas únicas y especiales.
-                  </p>
-                  <!--<div class="options">
-                    <h6>
-                      $17
-                    </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
-                    </a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 all upcycling">
-            <div class="box">
-              <div>
-                <div class="img-box">
-                  <img src="images/vestido.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Transformación
-                  </h5>
-                  <p>
-                    En nuestro taller de costura, transformamos tus prendas en otros
-                    complementos como bolsos, cojines, delantales y mucho más. Si tienes
-                    alguna prenda que ya no uses pero que te gustaría mantener cerca,
-                    podemos darle una segunda vida y crear algo nuevo y emocionante para ti.
-                  </p>
-                  <!--<div class="options">
-                    <h6>
-                      $18
-                    </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
-                    </a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 all complementos">
-            <div class="box">
-              <div>
-                <div class="img-box">
-                  <img src="images/dragones1.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Bolsos de viaje
-                  </h5>
-                  <p>
-                    ¿Buscas un bolso de viaje único y personalizado? En nuestro
-                    taller de costura, creamos bolsos de viaje únicos y personalizados
-                    para que puedas viajar con estilo. Desde la elección de telas y
-                    colores hasta el diseño y la funcionalidad, trabajamos contigo para
-                    crear un bolso de viaje que se adapte a tus necesidades y gustos.
-                  </p>
-                  <!--<div class="options">
-                    <h6>
-                      $10
-                    </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
-                    </a>
-                  </div>-->
-                </div>
-              </div>
-            </div>
+          <div class="step">
+            <h3>Te lo devolvemos listo</h3>
+            <p>Entregamos tu prenda arreglada, revisada y lista para estrenar de nuevo.</p>
           </div>
         </div>
-      </div>
-      <!--<div class="btn-box">
-        <a href="">
-          View More
-        </a>
-      </div>-->
-    </div>
-  </section>
-
-  <!-- end food section -->
-
-  <!-- about section -->
-
-  <section id="sobre_nosotros" class="about_section layout_padding">
-    <div class="container  ">
-
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/mural.jpeg" alt="">
-          </div>
+        <div class="pricing-strip">
+          <p><strong>En Can Baró, la recogida y entrega es gratuita.</strong> En el resto de Barcelona, solo
+            5&nbsp;€ en total (recogida + entrega). Horario: lunes a viernes de 10:00 a 14:00 y de 15:00 a 19:00.</p>
+          <a class="btn btn-primary"
+            href="https://wa.me/34627398739?text=Hola!%20Quiero%20pedir%20una%20recogida%20a%20domicilio."
+            target="_blank" rel="noopener">Pedir recogida</a>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                Somos Cose Q' Cose
-              </h2>
-            </div>
+      </div>
+    </section>
 
-            <p>
-              En nuestro taller de arreglos de ropa somos expertos en proporcionar
-              soluciones personalizadas para tus prendas. Realizamos todo tipo de
-              arreglos, desde cambiar la cremallera de una chaqueta hasta arreglar
-              el bajo de un pantalón. Nuestro objetivo es ofrecerte un servicio rápido
-              y de alta calidad, adaptado a tus necesidades y presupuesto.
-              Además, contamos con un equipo de profesionales altamente cualificados y
-              experimentados en el sector de la moda que te darán consejos sobre qué se le
-              puede hacer a tu prenda favorita. Si buscas un servicio de arreglos de ropa
-              de confianza y con años de experiencia, ¡has llegado al lugar correcto!
+    <!-- ============ NOSOTROS ============ -->
+    <section class="section" id="nosotros">
+      <div class="container about-grid">
+        <div>
+          <span class="eyebrow">Calidad, confianza y buena onda</span>
+          <h2>Somos Cose Q' Cose</h2>
+          <p>Somos un taller de costura familiar nacido en el barrio de Can Baró, con años de experiencia en el
+            sector de la moda. Nos apasiona dar una segunda vida a las prendas: arreglamos, transformamos y
+            creamos complementos únicos con las manos y con el corazón.</p>
+          <p>Desde que trabajamos a domicilio, llevamos el taller allá donde nos necesites: tu ropa viaja, tú no.</p>
+          <div class="collab">
+            <h3>Vestuario para los Trons del Baró 🔥</h3>
+            <p>Tuvimos el honor de confeccionar el vestuario de <a href="https://www.instagram.com/trons.del.baro/"
+                target="_blank" rel="noopener">@trons.del.baro</a>, la colla de diables de Can Baró.
+              <a href="https://www.instagram.com/p/DZ0U4PajDjB/" target="_blank" rel="noopener">Mira cómo quedó →</a>
             </p>
-            <!--a href="">
-              Read More
-            </a-->
           </div>
+        </div>
+        <div class="about-photos">
+          <img src="images/taller-can-baro-mural.jpg" loading="lazy" width="900" height="675"
+            alt="Mural del taller de costura Cose Q' Cose en el barrio de Can Baró, Barcelona" />
+          <img src="images/flyer-cose-q-cose.jpg" loading="lazy" width="1000" height="1000"
+            alt="Flyer ilustrado de Cose Q' Cose: servicio de costura a domicilio en Barcelona — voy donde me necesitas" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- end about section -->
-
-  <!-- book section -->
-  <section id="contacto" class="book_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Contacto
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form_container">
-            <form action="https://formspree.io/f/mwkjabyv" method="POST">
-              <div>
-                <input type="text" class="form-control" placeholder="Nombre" />
-              </div>
-              <div>
-                <input name="email" type="email" class="form-control" placeholder="Email" />
-              </div>
-              <div>
-                <textarea name="message" class="form-control" placeholder="Tu consulta" required></textarea>
-              </div>
-              <div class="row">
-                <div class="btn_box col-md-">
-                  <button type="submit">
-                    Enviar mail
-                  </button>
-                </div>
-              </div>
-            </form>
-            <a href="https://api.whatsapp.com/send?phone=+34627398739&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20taller."
-              class="float" target="_blank">
-              <button>
-                Whatsapp
-                <i class="fa fa-whatsapp my-float"></i>
-              </button>
-            </a>
-          </div>
+    <!-- ============ OPINIONES ============ -->
+    <section class="section section-alt" id="opiniones">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Servicio premium a precio económico</span>
+          <h2>Qué dicen nuestros vecinos</h2>
+          <p class="lead">Reseñas reales de Google de clientes de Can Baró, El Guinardó y alrededores.</p>
         </div>
-        <div class="col-md-6">
-          <div class="map_container ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.097921511269!2d2.1642376154155287!3d41.415392979261476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a334c4b5065f%3A0x6a502cec780a64cc!2sCose%20Q&#39;%20Cose!5e0!3m2!1sen!2ses!4v1680348215170!5m2!1sen!2ses"
-              width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+        <div class="reviews">
+          <figure class="review">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>«Es ya el segundo vestido de boda que llevo y no puedo estar más contenta con el
+              resultado. Además, ahora que hay servicio a domicilio es todavía más cómodo. Súper profesional,
+              atento y se nota que le gusta mucho lo que hace.»</blockquote>
+            <figcaption>Paula <span>Reseña de Google</span></figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>«Entendió perfectamente todo lo que quería, me dio sugerencias y quedó increíble. Un
+              servicio excelente, muy profesional y de total confianza. Y ahora incluso viene a tu casa,
+              ¡es perfecto!»</blockquote>
+            <figcaption>Luciana <span>Reseña de Google</span></figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>«Ya llevamos varias veces pidiendo distintas cosas — bolsas de tela personalizadas
+              bordadas — y lo cierto es que trabaja muy bien. Rápido, atento y encantador; se adapta a los
+              tiempos que necesitamos.»</blockquote>
+            <figcaption>Sara <span>Reseña de Google</span></figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>«Llamé por un arreglo urgente de un bikini al que la lavadora había arrancado una tira.
+              Aunque parecía imposible, lo resolvió en menos de una hora y de manera excelente. Recomiendo sin
+              duda.»</blockquote>
+            <figcaption>Isabella <span>Reseña de Google</span></figcaption>
+          </figure>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- end book section -->
-
-  <!-- client section -->
-
-  <section class="client_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center psudo_white_primary mb_45">
-        <h2>
-          Qué dicen nuestros clientes
-        </h2>
-      </div>
-      <div class="carousel-wrap row ">
-        <div class="owl-carousel client_owl-carousel">
-          <div class="item">
-            <div class="box">
-              <div class="detail-box">
-                <p>
-                  Me enamoré de una chaqueta preciosa que diseñó él mismo y tuve que encargarle otra a medida. Un trato
-                  estupendo!
-
-                </p>
-                <h6>
-                  Laura B.
-                </h6>
-              </div>
-              <!--<div class="img-box">
-                <img src="images/client1.jpg" alt="" class="box-img">
-              </div>-->
-            </div>
-          </div>
-          <div class="item">
-            <div class="box">
-              <div class="detail-box">
-                <p>
-                  Les pedí que me arreglaran la cremallera de mi chaqueta, y al día siguiente la tenía como nueva😍
-                  Muy buen trato, muy buena gente y muy rápido!
-                </p>
-                <h6>
-                  Marc S. R.
-                </h6>
-
-              </div>
-              <!--<div class="img-box">
-                <img src="images/client2.jpg" alt="" class="box-img">
-              </div>-->
-            </div>
-
-          </div>
-          <div class="item">
-            <div class="box">
-              <div class="detail-box">
-                <p>
-                  Son geniales y muy simpáticos. Me hicieron varios arreglos y un bolso súper personalizado que encargué
-                  para
-                  una amiga. Estoy muy contenta con el servicio y la atención. Los recomiendo 100%
-                </p>
-                <h6>
-                  Gisela Z.
-                </h6>
-
-              </div>
-              <!--<div class="img-box">
-                <img src="images/client2.jpg" alt="" class="box-img">
-              </div>-->
-            </div>
-          </div>
-          <div class="item">
-            <div class="box">
-              <div class="detail-box">
-                <p>
-                  Ahora tenemos una hermosa bolsa de maternidad para nuestra hija. Muy buena calidad y hecho con gran
-                  atención al detalle. Muy recomendable.
-                </p>
-                <h6>
-                  Chris S.
-                </h6>
-
-              </div>
-              <!--<div class="img-box">
-                <img src="images/client2.jpg" alt="" class="box-img">
-              </div>-->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end client section -->
-
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 footer-col">
-          <div class="footer_contact">
-            <h4>
-              Contacto
-            </h4>
-            <div class="contact_link_box">
-              <a href="https://goo.gl/maps/CVVVc9mpbSYdGjUh6">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  C/ Francesc Alegre nº5, Barcelona
-                </span>
-              </a>
-              <a href="tel:+34627298739">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Llámanos +34 627 39 87 39
-                </span>
-              </a>
-              <a href="mailto:coseqcose.bcn@gmail.com">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  coseqcose.bcn@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 footer-col">
-          <div class="footer_detail">
-            <a href="" class="footer-logo">
-              Cose Q' Cose
-            </a>
-            <p>
-              Tu taller de arreglos de ropa y complementos en Barcelona.
-            </p>
-            <div class="footer_social">
-              <a target="_blank" href="https://www.instagram.com/coseqcose.bcn/">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a target="_blank"
-                href="https://api.whatsapp.com/send?phone=+34627398739&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20taller.">
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-              </a>
-              <!--<a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-pinterest" aria-hidden="true"></i>
-              </a>-->
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 footer-col">
-          <h4>
-            Horario
-          </h4>
-          <p>
-            <b>De lunes a viernes</b>
-          </p>
-          <p>
-            10:00 - 14:00
-            <br>
-            15:00 - 19:00
-          </p>
-          <p>
-            <b>Sábado</b>
-            <br>
-            Previa Cita
-          </p>
-        </div>
-      </div>
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved
+        <p class="reviews-footer">
+          <a href="https://maps.app.goo.gl/PLKGwGQZFfFuwniM7" target="_blank" rel="noopener">Lee las 86 reseñas
+            en Google (4,9 ★) →</a>
         </p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Voy donde me necesitas</span>
+          <h2>Contacto</h2>
+          <p class="lead">Escríbenos y organizamos la recogida de tu prenda o tu encargo personalizado.</p>
+        </div>
+        <div class="contact-grid">
+          <form class="contact-form" action="https://formspree.io/f/mwkjabyv" method="POST">
+            <input type="hidden" name="_subject" value="Consulta desde coseqcose.com" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <label>Nombre
+              <input type="text" name="nombre" required autocomplete="name" placeholder="Tu nombre" />
+            </label>
+            <label>Email
+              <input type="email" name="email" required autocomplete="email" placeholder="tu@email.com" />
+            </label>
+            <label>¿Qué necesitas?
+              <textarea name="message" rows="5" required
+                placeholder="Cuéntanos qué prenda quieres arreglar o qué complemento tienes en mente…"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+          </form>
+          <div class="contact-info">
+            <a class="btn btn-whatsapp"
+              href="https://wa.me/34627398739?text=Hola!%20Quiero%20pedir%20una%20recogida%20a%20domicilio."
+              target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3Z" />
+              </svg>
+              WhatsApp: 627 39 87 39
+            </a>
+            <div class="info-line">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2Z" />
+              </svg>
+              <p>Llámanos: <a href="tel:+34627398739">+34 627 39 87 39</a><br />
+                <small>Mejor con cita previa: así organizamos la recogida a tu medida.</small></p>
+            </div>
+            <div class="info-line">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-10 6L2 7" />
+              </svg>
+              <p><a href="mailto:coseqcose.bcn@gmail.com">coseqcose.bcn@gmail.com</a></p>
+            </div>
+            <div class="info-line">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <p>Carrer del Baró de Sant Lluís, 37<br />08024 Barcelona (Can Baró, Horta-Guinardó)</p>
+            </div>
+            <table class="hours-table">
+              <caption class="visually-hidden">Horario de atención</caption>
+              <tr>
+                <td>Lunes a viernes</td>
+                <td>10:00–14:00 · 15:00–19:00</td>
+              </tr>
+              <tr>
+                <td>Sábado y domingo</td>
+                <td>Cerrado</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.097921511269!2d2.1642376154155287!3d41.415392979261476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a334c4b5065f%3A0x6a502cec780a64cc!2sCose%20Q&#39;%20Cose!5e0!3m2!1ses!2ses!4v1680348215170!5m2!1ses!2ses"
+            loading="lazy" title="Mapa: Cose Q' Cose, Can Baró, Barcelona"
+            referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand-foot" href="./">Cose Q' Cose</a>
+          <p>Tu taller de costura, complementos artesanales y arreglos de ropa a domicilio en Can Baró,
+            El Guinardó, El Carmel, Gràcia y toda Barcelona.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/coseqcose.bcn/" target="_blank" rel="noopener"
+              aria-label="Instagram de Cose Q' Cose">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4.5" />
+                <circle cx="17.5" cy="6.5" r="1.3" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a href="https://wa.me/34627398739" target="_blank" rel="noopener"
+              aria-label="WhatsApp de Cose Q' Cose">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h2>Contacto</h2>
+          <address>
+            Carrer del Baró de Sant Lluís, 37<br />
+            08024 Barcelona<br />
+            <a href="tel:+34627398739">+34 627 39 87 39</a><br />
+            <a href="mailto:coseqcose.bcn@gmail.com">coseqcose.bcn@gmail.com</a>
+          </address>
+        </div>
+        <div>
+          <h2>Horario</h2>
+          <ul>
+            <li>Lunes a viernes: 10:00–14:00 y 15:00–19:00</li>
+            <li>Sábado y domingo: cerrado</li>
+          </ul>
+          <ul>
+            <li><a href="ca/">Català</a> · <a href="en/">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Cose Q' Cose — Can Baró, Barcelona</span>
+        <span>Hecho con amor y cuidado ❤</span>
       </div>
     </div>
   </footer>
-  <!-- footer section -->
 
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- isotope js -->
-  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+  <a class="wa-float" href="https://wa.me/34627398739?text=Hola!%20Quiero%20pedir%20una%20recogida%20a%20domicilio."
+    target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3Z" />
+    </svg>
+  </a>
 
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
