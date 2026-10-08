@@ -1,0 +1,16 @@
+{
+  "name": "Cose Q' Cose",
+  "short_name": "Cose Q' Cose",
+  "description": "Arreglos de ropa y bolsos artesanales a domicilio en Barcelona",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#ffbe33",
+  "icons": [
+    { "src": "/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
